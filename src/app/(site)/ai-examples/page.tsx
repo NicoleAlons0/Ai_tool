@@ -48,10 +48,10 @@ const AiToolPage = () => {
 
       <Breadcrumb pageTitle="OpenAI Examples" />
 
-      <section className="pb-25 pt-3">
+      <section className="ai-tool-page pb-25 pt-3">
         <div className="z-10 mx-auto max-w-[1170px] px-4 sm:px-8 xl:px-0">
           <div className="aiExamples-border-gredient relative flex flex-col items-center justify-center rounded-lg bg-white/[0.05] p-4 md:justify-between lg:flex-row lg:px-6 lg:py-2">
-            <p className="text-center md:text-left">
+            <p className="text-center text-white md:text-left">
               <Image
                 src={"/images/ai-tools/icon-1.svg"}
                 width={20}

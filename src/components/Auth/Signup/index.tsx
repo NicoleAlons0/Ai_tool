@@ -85,7 +85,7 @@ const Signup = () => {
 
   return (
     <>
-      <section className="pb-17.5 pt-17.5 lg:pb-22.5 xl:pb-27.5">
+      <section className="auth-page-section pb-17.5 pt-17.5 lg:pb-22.5 xl:pb-27.5">
         <div className="mx-auto max-w-[1170px] px-4 sm:px-8 xl:px-0">
           <div className="wow fadeInUp rounded-3xl bg-white/[0.05]">
             <div className="flex">

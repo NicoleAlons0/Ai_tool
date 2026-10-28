@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const SingleExample = ({ example }: { example: AiExample }) => {
   return (
-    <div className="aiExamples-border-gredient relative rounded-lg">
+    <div className="ai-example-card aiExamples-border-gredient relative rounded-lg">
       <div className="group relative overflow-hidden rounded-lg px-8 py-9 ">
         <span
           className={`features-bg absolute left-0 top-0 -z-1 h-full w-full ${
@@ -18,7 +18,7 @@ const SingleExample = ({ example }: { example: AiExample }) => {
         <h3 className="mb-4 text-2xl font-semibold text-white">
           {example.title}
         </h3>
-        <p className="font-medium">{example.description}</p>
+        <p className="font-medium text-white/95">{example.description}</p>
 
         <Link
           href={example.path}

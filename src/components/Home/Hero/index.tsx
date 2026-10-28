@@ -36,25 +36,22 @@ const Hero = () => {
             />
 
             <span className='hero-subtitle-text'>
-              Launch Your AI Startup with
+              Independent creative technologist
             </span>
           </span>
-          <h1 className='xl:text-heading-1 mb-6 text-3xl font-extrabold text-white sm:text-5xl'>
-            OpenAI + Next.js SaaS Boilerplate and Starter Kit
+          <h1 className='xl:text-heading-1 mb-6 text-4xl font-extrabold tracking-tight text-white sm:text-6xl xl:text-[72px]! xl:leading-[1.02]!'>
+            I build digital work that <span className='text-[#ff4d00]'>moves.</span>
           </h1>
 
-          <p className='mx-auto mb-9 max-w-[500px] font-medium md:text-lg'>
-            Ideal for developers looking to build SaaS applications using OpenAI
-            and Next.js, this starter kit comes with pre-configured and
-            pre-built examples, making it easier to quickly kickstart your AI
-            startup.
+          <p className='mx-auto mb-9 max-w-[600px] font-medium text-white/70 md:text-lg'>
+            Product designer, developer, and creative problem-solver crafting bold brands, useful products, and memorable digital experiences.
           </p>
 
           <Link
             href='/ai-examples'
             className='hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80'
           >
-            Try AI Examples
+            Explore my work
           </Link>
         </div>
       </div>

@@ -1,0 +1,106 @@
+/* Global AR/VR motion effects */
+/* Does not replace your existing background */
+
+:root {
+  --ar-accent: #00eaff;
+  --ar-glow: rgba(0, 234, 255, 0.5);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.ar-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.ar-ring {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(0, 234, 255, 0.25);
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.08);
+  animation: ar-rotate 18s linear infinite;
+}
+
+.ar-ring::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px dashed rgba(0, 234, 255, 0.35);
+  border-radius: 50%;
+}
+
+.ar-ring:first-child {
+  top: 12%;
+  right: -100px;
+}
+
+.ar-ring:nth-child(2) {
+  bottom: 10%;
+  left: -110px;
+  animation-direction: reverse;
+}
+
+.ar-cursor {
+  position: fixed;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 234, 255, 0.13), transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ar-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.ar-reveal.ar-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ar-tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+@keyframes ar-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ar-ring {
+    animation: none;
+  }
+
+  .ar-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .ar-tilt {
+    transition: none;
+  }
+}
+
+@media (hover: none) {
+  .ar-cursor {
+    display: none;
+  }
+}
