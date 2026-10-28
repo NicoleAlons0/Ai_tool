@@ -110,11 +110,15 @@ const Header = () => {
                         }}
                         className={`relative rounded-full px-4 py-2 text-sm font-bold transition duration-200 ${
                           ((menuItem.title === "AI Tool" && pathUrl?.startsWith("/ai-examples")) ||
+                            (menuItem.title === "About" && pathUrl === "/about") ||
+                            (menuItem.title === "Gaming" && pathUrl === "/gaming") ||
                             (menuItem.path?.startsWith("/#") && menuItem.path.slice(2) === activeHash && pathUrl === "/"))
                             ? "overflow-hidden border border-orange-100/50 bg-cover bg-center text-white shadow-[0_8px_24px_rgba(239,68,68,.32)] brightness-110 hover:-translate-y-0.5"
                             : "border border-transparent text-white/85 hover:text-white"
                         }`}
                         style={((menuItem.title === "AI Tool" && pathUrl?.startsWith("/ai-examples")) ||
+                          (menuItem.title === "About" && pathUrl === "/about") ||
+                          (menuItem.title === "Gaming" && pathUrl === "/gaming") ||
                           (menuItem.path?.startsWith("/#") && menuItem.path.slice(2) === activeHash && pathUrl === "/")) ? {
                           backgroundImage: "linear-gradient(90deg, rgba(24,12,8,.82), rgba(180,48,18,.58), rgba(24,12,8,.82)), url('/images/howls/background.jpg')",
                           backgroundSize: "cover",

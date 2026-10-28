@@ -121,6 +121,22 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <div className="creator-footer">
+          <div className="creator-signature">
+            <span className="magic-star" aria-hidden="true">
+              ✦
+            </span>
+            <p>Created &amp; Designed by</p>
+            <h2>Nicole Alonso</h2>
+            <p className="copyright">
+              &copy; {new Date().getFullYear()} Nicole Alonso. All Rights
+              Reserved.
+            </p>
+            <span className="magic-star" aria-hidden="true">
+              ✦
+            </span>
+          </div>
+        </div>
       </footer>
     </>
   );
