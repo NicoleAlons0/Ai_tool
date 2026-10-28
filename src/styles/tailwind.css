@@ -1862,7 +1862,7 @@ body {
   place-items: center;
   overflow: hidden;
   background: #172b47;
-  color: #ffe8b4;
+  color: #eacb83;
   transition: opacity 1.5s ease, visibility 1.5s;
 }
 
@@ -1916,6 +1916,76 @@ body {
   font-family: Georgia, serif;
   font-style: italic;
   margin: 15px 0 32px;
+}
+
+.rickroll-entrance {
+  text-align: center;
+  padding: 60px 20px;
+  pointer-events: auto;
+  color: #f5e9d4;
+}
+
+.rickroll-entrance h1 {
+  display: block;
+  margin: 0 0 12px;
+  color: #ffe8b4;
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 4vw, 48px);
+  letter-spacing: 0;
+}
+
+.rickroll-entrance p {
+  display: block;
+  margin: 8px 0;
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+.qr-frame {
+  display: inline-flex;
+  padding: 18px;
+  margin: 25px auto;
+  background: #fff;
+  border: 5px solid #d9b66f;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(234, 203, 131, .5);
+  animation: floatQR 4s ease-in-out infinite;
+}
+
+.qr-frame img {
+  display: block;
+  max-width: 100%;
+}
+
+.mystery-text {
+  color: #f2cc8e;
+}
+
+.entrance-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 999px;
+  color: #182b3c;
+  background: #eacb83;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.entrance-btn:hover {
+  background: #fff0c7;
+}
+
+@keyframes floatQR {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qr-frame {
+    animation: none;
+  }
 }
 
 #howl-enter {
